@@ -1,4 +1,4 @@
-// Copyright 2022 Google LLC
+// Copyright {{cookiecutter.year}} Google LLC
 //
 // Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
 // https://www.apache.org/licenses/LICENSE-2.0> or the MIT license
@@ -6,13 +6,13 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-package com.example;
+package {{cookiecutter.java_package}};
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.apache.beam.sdk.Pipeline;
-import org.apache.beam.sdk.io.gcp.pubsublite.PubsubLiteIO;
-import org.apache.beam.sdk.io.gcp.pubsublite.SubscriberOptions;
+import org.apache.beam.sdk.coders.StringUtf8Coder;
 import org.apache.beam.sdk.options.Default;
 import org.apache.beam.sdk.options.Description;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
@@ -22,10 +22,7 @@ import org.apache.beam.sdk.transforms.MapElements;
 import org.apache.beam.sdk.values.PCollection;
 import org.apache.beam.sdk.values.TypeDescriptors;
 
-import com.google.cloud.pubsublite.ProjectId;
-import com.google.cloud.pubsublite.SubscriptionPath;
-
-public class App {
+public class {{cookiecutter.main_class}} {
 	public interface Options extends StreamingOptions {
 		@Description("Input text to print.")
 		@Default.String("My input text")
@@ -36,16 +33,7 @@ public class App {
 
 	public static PCollection<String> buildPipeline(Pipeline pipeline, String inputText) {
 		return pipeline
-				.apply(PubsubLiteIO.read(
-						SubscriberOptions
-								.newBuilder()
-								.setSubscriptionPath(SubscriptionPath.newBuilder()
-										.setProject(ProjectId.of("zr-dev-vincegonzalez"))
-										.setName(SubscriptionName.of(""))
-										.build())
-								.build()))
-				// .apply("Create elements", Create.of(Arrays.asList("Hello", "World!", inputText)))
-				.apply(null)
+				.apply("Create elements", Create.of(Arrays.asList("Hello", "World!", inputText)))
 				.apply("Print elements",
 						MapElements.into(TypeDescriptors.strings()).via(x -> {
 							System.out.println(x);
