@@ -44,6 +44,12 @@ cd my-beam-starter-project
 gradle build test run
 ```
 
+You can also check that it works on Cloud Build:
+
+```sh
+gcloud builds submit
+```
+
 ## Generate your customized project
 
 We recommend you follow the prompts to customize the project. Eliminating the `--no-input` option will cause cookiecutter to prompt you interactively.
