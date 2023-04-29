@@ -1,13 +1,16 @@
 # Cookiecutter for Apache Beam Java 
 
-If you want to clone this repository to start your own project,
-you can choose the license you prefer and feel free to delete anything related to the license you are dropping.
+If you want to clone this repository you can do so to modify the template for the starter Beam project.
+
+This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html), so you will need to modify the contents below `{{cookiecutter.project_slug}}`
+in order to change the starter project that results from running cookiecutter.
 
 ## Before you begin
 
-You should have a working Python 3 install. We recommend Python 3.9.
+You should have a working Python 3 install. We recommend Python 3.9. As of this writing (April 2023), Python 3.9 is shipped with macOS Ventura (13.3.1).
 
 Make sure you have a [Java](https://en.wikipedia.org/wiki/Java_%28programming_language%29) development environment ready.
+
 If you don't, an easy way to install it is with [`sdkman`](https://sdkman.io).
 
 ```sh
