@@ -33,8 +33,8 @@ jobs:
         run: |
           pip install cookiecutter
 
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+      # - name: Setup Gradle
+      #   uses: gradle/gradle-build-action@v2
 
       - name: Use cookiecutter to create a project
         run: |
@@ -43,7 +43,7 @@ jobs:
           ls -l
 
       - name: Build the starter project with gradle
-        run: ./gradlew build
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: test
 
-      - name: Run tests
-        run: ./gradlew test
