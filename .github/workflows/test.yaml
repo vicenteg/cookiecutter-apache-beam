@@ -30,8 +30,9 @@ jobs:
           cookiecutter --no-input .
           ls -l
       - name: Build the starter project with gradle
-        uses: actions/setup-java@v3
-        uses: gradle/gradle-build-action@v2
+        uses: |
+          actions/setup-java@v3
+          gradle/gradle-build-action@v2
         run: |
           ./gradlew build
       - name: Run tests
