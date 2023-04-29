@@ -3,6 +3,7 @@
   "email": "vincegonzalez@google.com",
   "project_name": "Beam Starter - Java",
   "repo_name": "cookiecutter-beam-starter-java",
+  "project_slug": "my-beam-starter-project",
   "project_short_description": "A Beam Java project to get you going.",
   "release_date": "2023-05-01",
   "year": "2023",
