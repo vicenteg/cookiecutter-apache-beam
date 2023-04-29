@@ -15,7 +15,7 @@ repositories {
 }
 
 application {
-    mainClass = '{{cookiecutter.java_package}}.{{cookiecutter.mainClass}}'
+    mainClass = '{{cookiecutter.java_package}}.{{cookiecutter.main_class}}'
 }
 
 test {
@@ -41,7 +41,7 @@ jar {
     baseName = 'pipeline'
     destinationDirectory = file('build')
     manifest {
-        attributes 'Main-Class': '{{cookiecutter.java_package}}.{{cookiecutter.mainClass}}'
+        attributes 'Main-Class': '{{cookiecutter.java_package}}.{{cookiecutter.main_class}}'
     }
     exclude 'META-INF/*.SF'
     exclude 'META-INF/*.DSA'
