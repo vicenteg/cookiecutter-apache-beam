@@ -16,11 +16,11 @@ jobs:
     name: Test cookiecutter-beam-java
     steps:
     - uses: actions/setup-java@v3
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
     - uses: gradle/gradle-build-action@v2
       - name: Checkout
+        uses: actions/checkout@v3
       - name: Python 3.9
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
       - name: install cookiecutter
