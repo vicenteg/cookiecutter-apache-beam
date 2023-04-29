@@ -1,4 +1,4 @@
-# Copyright 2022 Google LLC
+# Copyright 2023 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
 # https://www.apache.org/licenses/LICENSE-2.0> or the MIT license
@@ -11,40 +11,20 @@ name: Test
 on: [push, pull_request]
 
 jobs:
-  Gradle:
+  test:
     runs-on: ubuntu-latest
+    name: Test cookiecutter-beam-java
     steps:
-    - uses: actions/checkout@v3.3.0
-    - uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-        cache: 'gradle'
-    - run: gradle assemble --info
-    - run: gradle test --info
-    - run: java -jar build/pipeline.jar --inputText="🎉"
-
-  sbt:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3.3.0
-    - uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-    - run: sbt -v 'Test / compile' assembly
-    - run: sbt -v test
-    - run: java -jar build/pipeline.jar --inputText="🎉"
-
-  Maven:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3.3.0
-    - uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-        cache: 'maven'
-    - run: mvn -DskipTests test-compile package
-    - run: mvn test
-    - run: java -jar target/beam-java-starter-1-jar-with-dependencies.jar --inputText="🎉"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Python 3.9
+        uses: actions/setup-python@4
+        with:
+          python-version: '3.9'
+      - name: install cookiecutter
+        run: |
+          pip install cookiecutter
+      - name: Run test
+        run: |
+          rm -rf my-beam-starter-project
+          cookiecutter --no-input .
