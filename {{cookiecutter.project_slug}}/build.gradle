@@ -12,6 +12,9 @@ plugins {
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://packages.confluent.io/maven/"
+    }
 }
 
 application {
@@ -27,6 +30,7 @@ dependencies {
     // App dependencies.
     implementation "org.apache.beam:beam-sdks-java-core:{{cookiecutter.beam_version}}"
     implementation "org.apache.beam:beam-runners-direct-java:{{cookiecutter.beam_version}}"
+    implementation "org.apache.beam:beam-runners-google-cloud-dataflow-java:{{cookiecutter.beam_version}}"
     implementation "org.apache.beam:beam-sdks-java-io-google-cloud-platform:{{cookiecutter.beam_version}}"
 
     implementation "org.slf4j:slf4j-jdk14:2.0.7"
@@ -38,6 +42,7 @@ dependencies {
 
 // Package a self-contained jar file.
 jar {
+    zip64 true
     destinationDirectory = file('build')
     manifest {
         attributes 'Main-Class': '{{cookiecutter.java_package}}.{{cookiecutter.main_class}}'
