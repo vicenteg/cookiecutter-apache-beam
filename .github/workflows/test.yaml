@@ -15,8 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Test cookiecutter-beam-java
     steps:
-    - uses: actions/setup-java@v3
-    - uses: gradle/gradle-build-action@v2
       - name: Checkout
         uses: actions/checkout@v3
       - name: Python 3.9
@@ -32,6 +30,8 @@ jobs:
           cookiecutter --no-input .
           ls -l
       - name: Build the starter project with gradle
+        uses: actions/setup-java@v3
+        uses: gradle/gradle-build-action@v2
         run: |
           ./gradlew build
       - name: Run tests
