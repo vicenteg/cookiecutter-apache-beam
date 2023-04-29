@@ -45,5 +45,6 @@ jobs:
       - name: Build the starter project with gradle
         uses: gradle/gradle-build-action@v2
         with:
+          gradle-version: 7.6
           arguments: test
 
