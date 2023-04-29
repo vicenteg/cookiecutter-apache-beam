@@ -26,7 +26,7 @@ public class {{cookiecutter.main_class}}Test {
 		var elements = {{cookiecutter.main_class}}.buildPipeline(pipeline, "Test");
 
 		// Note that the order of the elements doesn't matter.
-		PAssert.that(elements).containsInAnyOrder("Test", "Hello", "World!");
+		PAssert.that(elements).containsInAnyOrder("Test", "Greetings!");
 		pipeline.run().waitUntilFinish();
 	}
 }
