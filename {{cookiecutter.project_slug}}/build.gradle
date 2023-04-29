@@ -25,9 +25,9 @@ test {
 
 dependencies {
     // App dependencies.
-    implementation "org.apache.beam:beam-sdks-java-core:2.44.0"
-    implementation "org.apache.beam:beam-runners-direct-java:2.44.0"
-    implementation "org.apache.beam:beam-sdks-java-io-google-cloud-platform:2.44.0"
+    implementation "org.apache.beam:beam-sdks-java-core:{{cookiecutter.beam_version}}"
+    implementation "org.apache.beam:beam-runners-direct-java:{{cookiecutter.beam_version}}"
+    implementation "org.apache.beam:beam-sdks-java-io-google-cloud-platform:{{cookiecutter.beam_version}}"
 
     implementation "org.slf4j:slf4j-jdk14:1.7.32"
 
