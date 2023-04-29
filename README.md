@@ -1,17 +1,14 @@
 # Cookiecutter for Apache Beam Java 
 
-If you want to clone this repository you can do so to modify the template for the starter Beam project.
+This is an opinionated [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) repository for Apache Beam Java.
 
-This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html), so you will need to modify the contents below `{{cookiecutter.project_slug}}`
-in order to change the starter project that results from running cookiecutter.
+This project uses Gradle as the build tool, and Cloud Build for basic CI.
 
 ## Before you begin
 
 You should have a working Python 3 install. We recommend Python 3.9. As of this writing (April 2023), Python 3.9 is shipped with macOS Ventura (13.3.1).
 
-Make sure you have a [Java](https://en.wikipedia.org/wiki/Java_%28programming_language%29) development environment ready.
-
-If you don't, an easy way to install it is with [`sdkman`](https://sdkman.io).
+Make sure you have a [Java](https://en.wikipedia.org/wiki/Java_%28programming_language%29) development environment ready. If you don't, an easy way to install one is with [`sdkman`](https://sdkman.io).
 
 ```sh
 # Install sdkman.
@@ -20,6 +17,51 @@ curl -s "https://get.sdkman.io" | bash
 # Make sure you have Java 17 installed.
 sdk install java 17.0.5-tem
 ```
+
+This template also assumes you will use [Gradle](https://gradle.org). Gradle is a build tool focused on flexibility and performance. Gradle is widely used by many projects, including Apache Beam itself, and is generally considered more modern and user-friendly than Maven. We use the Groovy DSL in this project.
+
+Install Gradle using sdkman:
+
+```sh
+sdk install gradle 7.6
+```
+
+# Usage
+
+## Install cookiecutter
+
+```sh
+pip install --user cookiecutter
+```
+
+## Quickstart
+
+To get a generic project quickly and test that it builds:
+
+```sh
+cookiecutter --no-input https://github.com/vicenteg/cookiecutter-beam-java
+cd my-beam-starter-project
+gradle build test run
+```
+
+## Generate your customized project
+
+We recommend you follow the prompts to customize the project. Eliminating the `--no-input` option will cause cookiecutter to prompt you interactively.
+
+```sh
+cookiecutter https://github.com/vicenteg/cookiecutter-beam-java
+```
+
+# Build and test the project
+
+```sh
+cd {{your-project-name}}
+gradle build test run
+```
+
+The project should build successfully, and show you some output. Now you can get to work!
+
+# About the Cookiecutter template
 
 ## Project Structure
 
@@ -36,18 +78,6 @@ There are only two source files:
 * [`src/test/java/com/example/AppTest.java`](src/test/java/com/example/AppTest.java): tests for the `App.java` file.
 
 > ℹ️ Most build tools expect all the Java source files to be under `src/main/java/` and tests to be under `src/test/java/` by default.
-
-### Build Tool: Gradle
-
-[Gradle](https://gradle.org) is a build tool focused on flexibility and performance.
-
-This is a build tool widely used by many projects, including Apache Beam itself.
-
-```sh
-sdk install gradle
-```
-
-A basic Gradle setup consists of a [`build.gradle`](build.gradle) file written in [Groovy](https://groovy-lang.org) or [Kotlin](https://kotlinlang.org).
 
 ```sh
 # To do a simple run.
@@ -70,11 +100,6 @@ gradle jar
 java -jar build/pipeline.jar --inputText="🎉"
 ```
 
-## GitHub Actions automated testing
-
-This project already comes with automated testing via [GitHub Actions](https://github.com/features/actions).
-
-To configure it, look at the [`.github/workflows/test.yaml`](.github/workflows/test.yaml) file.
 
 ## Using other runners
 
@@ -90,6 +115,18 @@ Thank you for your interest in contributing!
 All contributions are welcome! 🎉🎊
 
 Please refer to the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more information.
+
+If you want to clone this repository you can do so to modify the template for the starter Beam project.
+
+This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html), so you will need to modify the contents below `{{cookiecutter.project_slug}}`
+in order to change the starter project that results from running cookiecutter.
+
+## GitHub Actions automated testing
+
+This project comes with automated testing via [GitHub Actions](https://github.com/features/actions). The action in this repository will check out this repository, generate a project, then compile and test it.
+
+To configure the Github Action in your fork, look at the [`.github/workflows/test.yaml`](.github/workflows/test.yaml) file.
+
 
 # License
 
