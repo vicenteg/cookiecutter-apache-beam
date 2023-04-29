@@ -8,7 +8,7 @@
   "main_class": "App",
   "__java_package_dirs": "{{cookiecutter.java_package|lower|replace('.', '/')}}",
   "project_slug": "my-beam-starter-project",
-  "project_short_description": "A Beam Java project to get you going.",
+  "project_short_description": "A very basic Apache Beam project to help you get started.",
   "release_date": "2023-05-01",
   "year": "2023",
   "version": "0.0.1"
