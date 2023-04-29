@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test cookiecutter-beam-java
     steps:
-      uses: |
+      - uses: |
           actions/setup-java@v3
           gradle/gradle-build-action@v2
       - name: Checkout
