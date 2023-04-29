@@ -2,7 +2,7 @@
   "full_name": "Vince Gonzalez",
   "email": "vincegonzalez@google.com",
   "project_name": "Beam Starter - Java",
-  "beam_version": "2.44.0",
+  "beam_version": "2.46.0",
   "repo_name": "cookiecutter-beam-starter-java",
   "java_package": "com.google.cloud",
   "main_class": "App",
