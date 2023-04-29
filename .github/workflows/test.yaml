@@ -46,5 +46,6 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: 7.6
+          build-root-directory: my-beam-starter-project
           arguments: test
 
