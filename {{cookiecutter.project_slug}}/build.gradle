@@ -29,7 +29,7 @@ dependencies {
     implementation "org.apache.beam:beam-runners-direct-java:{{cookiecutter.beam_version}}"
     implementation "org.apache.beam:beam-sdks-java-io-google-cloud-platform:{{cookiecutter.beam_version}}"
 
-    implementation "org.slf4j:slf4j-jdk14:1.7.32"
+    implementation "org.slf4j:slf4j-jdk14:2.0.7"
 
     // Tests dependencies.
     testImplementation "junit:junit:4.13.2"
