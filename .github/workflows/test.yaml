@@ -28,3 +28,4 @@ jobs:
         run: |
           rm -rf my-beam-starter-project
           cookiecutter --no-input .
+          ls -l
