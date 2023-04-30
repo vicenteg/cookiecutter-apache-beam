@@ -11,7 +11,39 @@ name: Test
 on: [push, pull_request]
 
 jobs:
-  test:
+  test-python:
+    runs-on: ubuntu-latest
+    name: Test cookiecutter-beam-python
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: install cookiecutter
+        run: |
+          pip install cookiecutter
+
+      - name: Use cookiecutter to create a Python project
+        run: |
+          rm -rf my-beam-starter-project
+          cookiecutter --no-input beam-python
+          ls -l
+
+      - name: Install dependencies for Beam
+        working-directory: my-beam-starter-project
+        run: pip install -r requirements.txt
+
+      - name: Run unittests
+        working-directory: my-beam-starter-project
+        run: python -m unittest
+
+
+
+  test-java:
     runs-on: ubuntu-latest
     name: Test cookiecutter-beam-java
     steps:
@@ -32,7 +64,7 @@ jobs:
         run: |
           pip install cookiecutter
 
-      - name: Use cookiecutter to create a project
+      - name: Use cookiecutter to create a Java project
         run: |
           rm -rf my-beam-starter-project
           cookiecutter --no-input beam-java
