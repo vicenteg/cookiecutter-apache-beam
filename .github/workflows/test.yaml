@@ -35,7 +35,7 @@ jobs:
       - name: Use cookiecutter to create a project
         run: |
           rm -rf my-beam-starter-project
-          cookiecutter --no-input .
+          cookiecutter --no-input beam-java
           ls -l
 
       - name: Build the starter project with gradle

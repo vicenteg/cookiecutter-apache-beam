@@ -1,0 +1,2 @@
+wheel>=0.40.0
+apache-beam=={{cookiecutter.beam_version}}

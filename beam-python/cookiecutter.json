@@ -1,0 +1,15 @@
+{
+    "full_name": "Joe Dev",
+    "email": "joedev@example.com",
+    "project_name": "Beam Starter - Python",
+    "beam_version": "2.46.0",
+    "pipeline_module": "my_app",
+    "repo_name": "cookiecutter-beam-starter-python",
+    "pipeline_main_class": "app",
+    "project_slug": "my-beam-starter-project",
+    "project_short_description": "A very basic Apache Beam project to help you get started.",
+    "release_date": "2023-05-01",
+    "year": "2023",
+    "version": "0.0.1"
+  }
+  
