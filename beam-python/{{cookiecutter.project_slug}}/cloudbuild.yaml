@@ -1,0 +1,4 @@
+ steps:
+  - name: apache/beam_python3.7_sdk:2.46.0
+    entrypoint: python3
+    args: ["-m", "unittest"]
