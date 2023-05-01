@@ -6,8 +6,8 @@ This project uses Gradle as the build tool for Java pipelines, and Cloud Build f
 
 Refer to the README in the cookiecutter directories for more instructions on usage.
 
-* [beam-java]()
-* [beam-python]()
+* [beam-java](./beam-java)
+* [beam-python](./beam-python)
 
 # GitHub Actions automated testing
 
