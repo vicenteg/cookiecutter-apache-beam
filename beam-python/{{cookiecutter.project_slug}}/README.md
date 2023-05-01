@@ -1,7 +1,4 @@
-# Apache Beam starter for Python
-
-If you want to clone this repository to start your own project,
-you can choose the license you prefer and feel free to delete anything related to the license you are dropping.
+# {{cookiecutter.project_name}}: Apache Beam Python
 
 ## Before you begin
 
@@ -49,15 +46,13 @@ python main.py --input-text="🎉"
 python -m unittest -v
 ```
 
-## GitHub Actions automated testing
+## Cloud Build for testing
 
-This project already comes with automated testing via [GitHub Actions](https://github.com/features/actions).
+This project already comes with automated testing via [Cloud Build](https://cloud.google.com/build).
 
-To configure it, look at the [`.github/workflows/test.yaml`](.github/workflows/test.yaml) file.
+To configure it, look at the [`cloudbuild.yaml`]() file.
 
 ## Using other runners
-
-To keep this template small, it only includes the [Direct Runner](https://beam.apache.org/documentation/runners/direct/).
 
 For a comparison of what each runner currently supports, look at the [Beam Capability Matrix](https://beam.apache.org/documentation/runners/capability-matrix/).
 
