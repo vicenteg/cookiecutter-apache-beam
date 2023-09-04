@@ -16,7 +16,7 @@ jobs:
     name: Test cookiecutter-beam-python
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Python 3.9
         uses: actions/setup-python@v4
@@ -53,7 +53,7 @@ jobs:
           java-version: 11
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Python 3.9
         uses: actions/setup-python@v4
