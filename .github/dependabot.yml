@@ -1,4 +1,4 @@
-# Copyright 2022 Google LLC
+# Copyright 2023 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
 # https://www.apache.org/licenses/LICENSE-2.0> or the MIT license
@@ -13,22 +13,14 @@ updates:
     schedule:
       interval: "daily"
     reviewers:
-      - lukecwik
-      - kennknowles
-      - robertwb
-      - kileys
-      - apilloud
+      - vicenteg
 
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
       interval: "daily"
     reviewers:
-      - lukecwik
-      - kennknowles
-      - robertwb
-      - kileys
-      - apilloud
+      - vicenteg
 
   # SBT is not yet supported: https://github.com/dependabot/dependabot-core/issues/352
 
@@ -37,8 +29,4 @@ updates:
     schedule:
       interval: "daily"
     reviewers:
-      - lukecwik
-      - kennknowles
-      - robertwb
-      - kileys
-      - apilloud
+      - vicenteg
