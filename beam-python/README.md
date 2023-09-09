@@ -1,8 +1,8 @@
 # Cookiecutter for Apache Beam Python 
 
-This is an opinionated [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) repository for Apache Beam Java.
+This is an opinionated [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html) repository for Apache Beam Python.
 
-This project uses Gradle as the build tool, and Cloud Build for basic CI.
+This project uses Cloud Build for basic CI.
 
 ## Before you begin
 
@@ -53,16 +53,7 @@ python3 -m unittest -v
 
 The project should build successfully, and show you some output. Now you can get to work!
 
-# About the Cookiecutter template
-
-## Project Structure
-
-This cookiecutter will yield a Beam Python project. It also comes with a minimal Cloud Build configuration.
-
-
 ## Using other runners
-
-To keep this template small, it only includes the [Direct Runner](https://beam.apache.org/documentation/runners/direct/).
 
 For a comparison of what each runner currently supports, look at the [Beam Capability Matrix](https://beam.apache.org/documentation/runners/capability-matrix/).
 
