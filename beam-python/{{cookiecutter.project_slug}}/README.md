@@ -50,24 +50,18 @@ python -m unittest -v
 
 This project already comes with automated testing via [Cloud Build](https://cloud.google.com/build).
 
-To configure it, look at the [`cloudbuild.yaml`]() file.
+If you have not already, [set up Cloud Build](https://cloud.google.com/build/docs/set-up).
+
+```sh
+gcloud builds submit
+```
+
+The project should build successfully, and show you some output. You can modify the project from here.
+
+To configure the build, look at the [`cloudbuild.yaml`]() file.
 
 ## Using other runners
 
 For a comparison of what each runner currently supports, look at the [Beam Capability Matrix](https://beam.apache.org/documentation/runners/capability-matrix/).
 
 To add a new runner, visit the runner's page for instructions on how to include it.
-
-## Contributing
-
-Thank you for your interest in contributing!
-All contributions are welcome! 🎉🎊
-
-Please refer to the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more information.
-
-# License
-
-This software is distributed under the terms of both the MIT license and the
-Apache License (Version 2.0).
-
-See [LICENSE](LICENSE) for details.
