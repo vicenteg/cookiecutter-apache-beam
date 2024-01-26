@@ -71,7 +71,7 @@ jobs:
           ls -l
 
       - name: Build the starter project with gradle
-        uses: gradle/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v3
         with:
           gradle-version: 7.6
           build-root-directory: my-beam-starter-project
