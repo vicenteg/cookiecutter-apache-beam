@@ -3,6 +3,7 @@
     "email": "joedev@example.com",
     "project_name": "Beam Starter - Python",
     "beam_version": "2.62.0",
+    "python_version": "3.12",
     "pipeline_module": "my_app",
     "repo_name": "cookiecutter-beam-starter-python",
     "pipeline_main_class": "app",
