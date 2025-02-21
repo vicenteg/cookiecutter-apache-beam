@@ -1,4 +1,4 @@
  steps:
-  - name: apache/beam_python3.7_sdk:2.46.0
+  - name: apache/beam_python{{cookiecutter.python_version}}_sdk:{{cookiecutter.beam_version}}
     entrypoint: python3
     args: ["-m", "unittest"]
