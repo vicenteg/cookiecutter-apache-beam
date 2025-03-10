@@ -15,13 +15,6 @@ This project comes with automated testing via [GitHub Actions](https://github.co
 
 To configure the Github Action in your fork, look at the [`.github/workflows/test.yaml`](.github/workflows/test.yaml) file.
 
-## Contributing
-
-Thank you for your interest in contributing!
-All contributions are welcome! 🎉🎊
-
-Please refer to the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more information.
-
 If you want to clone this repository you can do so to modify the template for the starter Beam project.
 
 This is a [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html), so you will need to modify the contents below `{{cookiecutter.project_slug}}`
